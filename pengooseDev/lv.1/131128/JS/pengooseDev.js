@@ -1,7 +1,6 @@
 function solution(X, Y) {
   const XMap = new Map();
   const YMap = new Map();
-  const YArr = Array.from(Y);
   const resultArr = [];
   for (let i of Array.from(X)) XMap.set(i, XMap.get(i) + 1 || 1);
   for (let i of Array.from(Y)) YMap.set(i, YMap.get(i) + 1 || 1);
