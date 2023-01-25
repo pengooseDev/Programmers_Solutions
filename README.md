@@ -6,9 +6,7 @@
 
 ## 오늘의 문제
 
-#### [머쓱이보다 키 큰 사람](https://school.programmers.co.kr/learn/courses/30/lessons/120585)
-
-#### [중복된 숫자 개수](https://school.programmers.co.kr/learn/courses/30/lessons/120583)
+설 연휴동안 0레벨 5페이지 최대한 많이 풀기!
 
 ---
 
