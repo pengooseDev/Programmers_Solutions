@@ -2,13 +2,23 @@ const input = Number(
   require('fs').readFileSync('/dev/stdin').toString().trim()
 );
 
-let answer = 0;
 let sugar = input;
-const myArr = [5, 3];
+let fiveBag = parseInt(sugar / 5);
+let threeBag;
+let answer;
 
-for (let i of myArr) {
-  answer += parseInt(sugar / i);
-  sugar = sugar % i;
+while (0 <= fiveBag) {
+  const remain = sugar - fiveBag * 5;
+  const dividable = remain % 3 === 0;
+
+  if (dividable) {
+    threeBag = remain / 3;
+    answer = threeBag + fiveBag;
+    break;
+  }
+
+  answer = -1;
+  fiveBag -= 1;
 }
 
-!sugar ? console.log(answer) : console.log(-1);
+console.log(answer);
