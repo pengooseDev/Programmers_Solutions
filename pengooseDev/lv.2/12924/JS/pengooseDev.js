@@ -1,24 +1,6 @@
 function solution(n) {
-  let answer = '';
-  const myNum = ['4', '1', '2'];
-
-  while (n > 0) {
-    const num = myNum[n % 3];
-    n = parseInt((n - 1) / 3);
-    answer = num + answer;
-  }
+  let answer = 0;
+  for (let i = 1; i <= n; i++) n % i === 0 && i % 2 === 1 ? (answer += 1) : '';
 
   return answer;
 }
-
-/*
-자릿수 추가되는 점화식
-
-3 / 12 / 39
- => n = 3 * (n + 1)
- => (n - 1) / 3 = n 
-
-3   4
-12  44
-39  444
-*/
