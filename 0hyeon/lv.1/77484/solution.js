@@ -1,8 +1,9 @@
-console.log(0 % 5);
-console.log(1 % 5);
-console.log(2 % 5);
-console.log(3 % 5);
-console.log(4 % 5);
-console.log(5 % 5);
-console.log(6 % 5);
-console.log(7 % 5);
+function solution(lottos, win_nums) {
+  var answer = [];
+  const correct = lottos.filter((lotto)=> win_nums.includes(lotto)).length
+  const zero = lottos.filter((lotto)=> lotto === 0).length
+  let max = 7 - correct === 7 ? 6 : 7 - correct
+  let min = 7 - (zero + correct) === 7 ? 6 : 7 - (zero + correct)
+  answer =  [ min,max ]
+  return answer;
+}
